@@ -1,6 +1,12 @@
-.footer{
-    background-color: rgba(205, 201, 201, 0.712);
-    font-size: medium;
-    margin: 0px;
-    padding: 15px;
+.footer-main{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+    .footer{
+        background-color: rgba(205, 201, 201, 0.712);
+        font-size: medium;
+        margin: 0px;
+        padding: 15px;
+    }
 }
