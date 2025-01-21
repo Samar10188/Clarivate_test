@@ -1,0 +1,33 @@
+.list-container{
+    max-height: 79.6vh;
+    overflow-y: scroll;
+    background-color: rgb(252, 232, 248);
+
+    .scroll-container{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 30px;
+
+        .tile{
+            border-radius: 5px;
+            background-color: rgba(153, 211, 248, 0.902);
+            height: 172px;
+            padding: 2%;
+
+            .img-fix{
+                height: 120px;
+                width: 100px;
+            }
+
+            .margin-set{
+                margin-bottom: 37px;
+            }
+        }
+    }
+}
+
+::ng-deep .cdk-virtual-scroll-content-wrapper {
+    overflow-y: scroll;
+  }

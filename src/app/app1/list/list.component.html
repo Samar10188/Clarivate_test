@@ -1,0 +1,25 @@
+<div class="list-container p-3">
+    <h2 class="text-center">List Page</h2>
+    <button class="btn btn-secondary btn-sm mb-4" routerLink="/app1">Back to Dashboard</button>
+
+    <cdk-virtual-scroll-viewport itemSize="100" class="scroll-container" (scrolledIndexChange)="onScroll($event)">
+        <div class="container">
+            <div *cdkVirtualFor="let item of items" class="row tile item mb-3">
+                <div class="col-md-3">
+                    <img class="img-fix" [alt]="item.title"
+                        src="https://www.w3schools.com/images/w3schools_green.jpg" />
+                </div>
+                <div class="col-md-9">
+                    <p class="mb-2">Album Id : {{item.id}}</p>
+                    <p class="margin-set">Title : {{item.title}}</p>
+                    <button class="btn btn-success btn-sm float-end" (click)="addToFavorites(item)">Add To
+                        Favorites</button>
+                </div>
+            </div>
+        </div>
+    </cdk-virtual-scroll-viewport>
+
+    <!-- <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+        <div *cdkVirtualFor="let item of items">{{ item }}</div>
+      </cdk-virtual-scroll-viewport> -->
+</div>
