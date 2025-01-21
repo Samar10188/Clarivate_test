@@ -1,0 +1,22 @@
+<div class="p-4 main-container">
+    <h2 class="text-center">Dashboard</h2>
+    <button class="btn btn-primary btn-sm" (click)="goToList()">Go to List Page</button>
+    <div class="mt-4">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Favorite Items</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of favorites$ | async">
+                    <td>{{item.title}}</td>
+                </tr>
+                <tr>
+                    No Items added to favorites
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
